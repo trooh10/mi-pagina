@@ -1,20 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Horario</title>
-    <style>
-        body {
-            margin: 0;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Horario</title>
 
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-    </style>
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #111;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 95%;
+    max-width: 900px;
+}
+
+td, th {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    cursor: pointer;
+}
+
+.vacio {
+    background: #222;
+}
+
+.proba { background: #4caf50; }
+.labo { background: #f4e04d; color: black; }
+.arqui { background: #d47adf; }
+.ingles { background: #00bcd4; }
+</style>
 </head>
+
 <body>
-    <img src="imagen.png">
+
+<h1>Mi Horario</h1>
+
+<table>
+<tr>
+<th>Hora</th>
+<th>Lunes</th>
+<th>Martes</th>
+<th>Miércoles</th>
+<th>Jueves</th>
+<th>Viernes</th>
+</tr>
+
+<tr>
+<td>16:00</td>
+<td class="labo" onclick="info('Laboratorio 4', 'Aula 101')">Lab 4</td>
+<td class="vacio"></td>
+<td class="proba" onclick="info('Probabilidad', 'Aula 103')">Proba</td>
+<td class="vacio"></td>
+<td class="vacio"></td>
+</tr>
+
+<tr>
+<td>18:00</td>
+<td class="vacio"></td>
+<td class="arqui" onclick="info('Arquitectura', 'Lab 8')">Arqui</td>
+<td class="labo" onclick="info('Laboratorio 4', 'Aula 101')">Lab 4</td>
+<td class="arqui" onclick="info('Arquitectura', 'Lab 8')">Arqui</td>
+<td class="ingles" onclick="info('Inglés', 'Aula 5')">Inglés</td>
+</tr>
+
+</table>
+
+<script>
+function info(materia, aula) {
+    alert("Materia: " + materia + "\n" + "Lugar: " + aula);
+}
+</script>
+
 </body>
 </html>
